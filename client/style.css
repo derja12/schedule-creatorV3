@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    font-family: 'helvetica';
+}
+
+body #body {
+    background-color: azure;
+    display: grid;
+    grid-template-rows: auto 50px;
+    height: 100vh;
+}
+
+body #body #main-wrapper {
+    grid-row: 1 / 2;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.1);
+    overflow-y: scroll;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+body #body #main-wrapper .page-body {
+    height: calc(100vh - 50px);
+    width: inherit;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+/* ============================== Select Page ================================= */
+
+body #body #main-wrapper #select-page-body {
+    background-color: azure;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+body #body #main-wrapper #select-page-body #select-page-list-div {
+    grid-area: 2 / 2 / 3 / 3;
+    
+    background-color: rgba(0,0,0,.1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.2);
+
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+body #body #main-wrapper #select-page-body #select-page-list-div #select-page-list-header {
+    grid-row: 1 / 2;
+    padding-top: .4rem;
+    padding-bottom: .3rem;
+    padding-right: auto;
+    padding-left: 1rem;
+    font-size: .8rem;
+    color: rgba(0,0,0,.6);
+    border-radius: 3px 3px 0px 0px;
+    background-color: rgba(0,0,0,.1);
+    font-weight: bold;
+}
+
+body #body #main-wrapper #select-page-body #select-page-list-div #select-page-list {
+    grid-row: 2 / 3;
+    margin-top: .5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+} .list-option {
+    padding-left: 1rem;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: auto;
+} .list-option:hover {
+    background-color: rgba(0,0,0,.05);
+    cursor: pointer;
+}
+
+/* ============================== Select Page ================================= */
+
+body #body #main-wrapper #new-page-body {
+    background-color: azure;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div {
+    grid-area: 2 / 2 / 3 / 3;
+    
+    background-color: rgba(0,0,0,.1);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.2);
+
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form-header {
+    grid-row: 1 / 2;
+    padding-top: .4rem;
+    padding-bottom: .3rem;
+    padding-right: auto;
+    padding-left: 1rem;
+    font-size: .8rem;
+    color: rgba(0,0,0,.6);
+    border-radius: 3px 3px 0px 0px;
+    background-color: rgba(0,0,0,.05);
+    font-weight: bold;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form {
+    grid-row: 2 / 3;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: .2rem;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, min-content) 1fr;
+} .form-input {
+    margin-bottom: 1.5rem;
+} .form-label {
+    margin-bottom: .75rem;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form #form-input-check-area {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: min-content min-content;
+} .check-box-label {
+    padding-top: auto;
+    padding-bottom: .1rem;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form #form-input-hours-area {
+    grid-row: 4 / 5;
+    display: grid;
+    grid-template-columns: auto min-content auto;
+    grid-template-rows: min-content min-content;
+} #open-hour-select {
+    grid-column: 1 / 2;
+    margin-left: 1.5rem;
+    margin-right: .75rem;
+} #close-hour-select {
+    grid-column: 3 / 4;
+    margin-left: .75rem;
+    margin-right: 1.5rem;
+} #hour-divider-p {
+    margin: 0px;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form #form-input-name-area {
+    grid-row: 6 / 7;
+    display: grid;
+} #name-input {
+    margin-left: 1.5rem;
+    margin-right: auto;
+}
+
+body #body #main-wrapper #new-page-body #new-page-form-div #new-page-form #form-submit-button {
+    grid-row: 7 / 8;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: rgba(255,255,255,1);
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 2px;
+    color: rgba(0,0,0,.8);
+    font-size: 1.15rem;
+} #form-submit-button:hover {
+    cursor: pointer;
+}
+
+/* ============================== Schedule Page ================================= */
+
+body #body #main-wrapper #schedule-page-body {
+    background-color: azure;
+
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
+    grid-template-rows: 1fr 15fr 1fr;
+}
+
+body #body #main-wrapper #schedule-page-body #schedule-page-div {
+    grid-area: 2 / 2 / 3 / 3;
+    
+    background-color: rgba(0,0,0,.1);
+    box-shadow: 0px 0px 4px rgba(0,0,0,.2);
+    border-radius: 3px 3px 0px 0px;
+
+    display: grid;
+    grid-template-rows: min-content auto;
+} .key-column {
+    grid-column: 1 / 2;
+    text-align: center;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    
+    border-bottom: 1px solid rgba(0,0,0,1);
+    border-right: 1px solid rgba(0,0,0,.6);
+    border-left: none !important;
+} .schedule-header {
+    grid-row: 1 / 2;
+    text-align: center;
+    background-color: rgba(29, 102, 191, 0.6);
+
+    border-bottom: 1px solid rgba(0,0,0,1);
+    border-left: 1px solid rgba(0,0,0,.6);
+} .half-hour-div {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+} .switch {
+    grid-row: 1 / 2;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: rgba(50,50,50,1);
+    user-select: none;
+    -moz-user-select: none;
+    text-align: center;
+}
+
+/* ============================== Edit Schedule ================================= */
+
+body #body #main-wrapper #schedule-page-body #edit-employee-background {
+    background-color: rgba(0,0,0,.75);
+    
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    bottom: 50px;
+}
+
+body #body #main-wrapper #add-employee-button {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+
+    background-color: rgba(240,255,255,.8);
+    border-radius: 0px 4px 0px 0px;
+    border-top: 2px solid rgba(0,0,0,.5);
+    border-right: 2px solid rgba(0,0,0,.5);
+    padding: .5rem 1rem .5rem 1rem;
+} #add-employee-button:hover {
+    cursor: pointer;
+    background-color: rgba(240,255,255,1);
+}
+
+
+/* ========== Dev Buttons / Employee List =========== */
+
+body #body #dev-buttons-wrapper {
+    grid-row: 2 / 3;
+    background-color: azure;
+
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 3;
+
+    display: grid;
+    grid-template-columns: auto repeat(3, 50px);
+}
+
+body #body #dev-buttons-wrapper .dev-button {
+    height: 50px;
+    width: 50px;
+} #edit-employee-button {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    background-color: darkslategray;
+} #availability-mode-button {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    background-color: lightskyblue;
+} #collapse-button {
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    background-color: palegreen;
+} #dark-button-div {
+    grid-row: 1 / 2;
+    grid-column: 2 / 5;
+    background-color: rgba(0,0,0,.75);
+}
+
+body #body #dev-buttons-wrapper #employee-list-div {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: white;
+    height: 50px;
+    width: calc(100vw - 150px);
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: min-content;
+} .employee-item {
+    grid-row: 1 / 2;
+    margin-left: auto;
+    line-height: 50px;
+    height: inherit;
+    color: rgba(0,0,0,.6);
+    background-color: rgba(0,0,0,.05);
+} .employee-name-input {
+    border: none;
+    background-color: rgba(0,0,0,.0);
+    font-size: 1.2rem;
+    text-align: center;
+    width: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    user-select: none;
+} .employee-name-input:focus {
+    border: none;
+    background-color: rgba(0,0,0,.1);
+    
+}
